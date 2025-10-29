@@ -1,5 +1,5 @@
 # SMS Spam Detection using LSTM
-# Author: Your Name
+# Author: ENAPA JEEVA SRI
 # Description: Classifies SMS messages as Spam or Ham using LSTM
 
 import kagglehub
@@ -97,4 +97,5 @@ predictions = (model.predict(sample_pad) > 0.5).astype(int)
 
 for i, msg in enumerate(sample_sms):
     label = "Spam" if predictions[i] == 1 else "Ham"
+
     print(f"Message: {msg}\nPredicted: {label}\n")
